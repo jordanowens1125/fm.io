@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    color: #8ba6c7;
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background-color: hsl(216, 50%, 16%);
+    align-self: center;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    gap: 20px;
+    -webkit-box-shadow: #0b182a 0 10px 20px;
+    -moz-box-shadow: #0b182a 0 10px 20px;
+    box-shadow: #0b182a 0 10px 20px;
+}
+
+h1,p{
+    font-size: 18px;
+}
+
+#nft{
+    width: 300px;
+    border-radius: inherit;
+    position: relative;
+}
+
+#nft img, #overlay{
+    width: 100%;
+    height: 100%;
+}
+
+#overlay{
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: hsl(178, 60%, 50%);
+    opacity: 0;
+    transition: .5s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+#overlay img{
+    width: 55px;
+    height: 55px;
+}
+
+h1{
+    color: white;
+}
+
+#info{
+    display: flex;
+    justify-content: space-between;
+}
+
+#info img{
+    height: 18px;
+}
+
+#value, #time{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+}
+
+#value p{
+    color: hsl(178, 100%, 50%);
+}
+
+#creator{
+    border-top: 1px solid hsl(215, 32%, 27%);
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#creator img{
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+#name{
+    color: #efefef;
+}
+
+/* hover */
+#name:hover, h1:hover{
+    color: hsl(178, 100%, 50%);
+}
+
+#nft:hover  #overlay{
+    display: flex;
+    opacity: .8;
+}
+
+@media screen and (max-width: 350px) {
+  main {
+    width: 90vw;
+  }
+  #main *{
+    width:100%;
+  }
+  #nft{
+    width: 100%;
+  }
+}

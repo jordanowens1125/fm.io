@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root{
+    --dark-blackish-blue: hsl(219, 29%, 14%);
+    --dark-grayish-blue: hsl(217, 19%, 35%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --moderate-violet: hsl(263, 55%, 52%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body{
+    background-color: var(--light-grayish-blue);
+}
+
+p{
+    font-size: 13px;
+}
+
+main{
+    display: grid;
+    grid-template-areas: 
+    'first'
+    'second'
+    'third'
+    'fourth'
+    'fifth'
+    ;
+    gap:20px;
+    padding:100px 20px;
+}
+
+.testimonial{
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+    display: grid;
+    position: relative;
+    -webkit-box-shadow: 0px 20px 45px -51px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 20px 45px -51px rgba(0,0,0,0.75);
+    box-shadow: 0px 20px 45px -51px rgba(0,0,0,0.75);
+}
+
+.attestant{
+    display: grid;
+    grid-template-columns: 70px auto;
+    height: 50px;
+}
+
+.headshot{
+    border-radius: 50%;
+    align-self: center;
+    justify-self: flex-start;
+}
+
+.attestant-info{
+    height: 100%;
+    padding: 5px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name{
+    font-size: 15px;
+}
+
+.verified{
+    opacity: .5;
+}
+
+.quote-heading{
+    font-weight:600;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.quote{
+    opacity: .7;
+}
+
+.testimonial:nth-of-type(1){
+    color: white;
+    background-color: var(--moderate-violet);
+    grid-area: first;
+}
+
+.testimonial:nth-of-type(2){
+    color: white;
+    background-color: var(--dark-grayish-blue);
+    grid-area: second;
+}
+
+.testimonial:nth-of-type(3){
+    color: var(--dark-grayish-blue);
+    background-color: white;
+    grid-area: third;
+}
+
+.testimonial:nth-of-type(4){
+    color: white;
+    background-color: var(--dark-blackish-blue);
+    grid-area: fourth;
+}
+
+.testimonial:nth-of-type(5){
+    color: var(--dark-grayish-blue);
+    background-color: white;
+    grid-area: fifth;
+}
+
+@media screen and (min-width: 1350px) {
+    main{
+        grid-template-areas: 
+        'first first     second fifth'
+        'third fourth    fourth fifth'
+        ; 
+        padding: 200px;
+    }
+    .testimonial{
+        padding: 30px;
+        grid-template-rows: 60px 80px auto;
+    }
+    .quote-heading{
+        line-clamp: 3;
+    }
+}

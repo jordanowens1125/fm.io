@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin San', sans-serif;
+    overflow: hidden;
+    color:hsl(0, 36%, 70%);
+}
+
+p{
+    line-height: 2;
+    font-size: 16px;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content{
+    flex:110%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100%;
+    padding: 75px;
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: start;
+}
+
+#info{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    gap: 50px;
+    align-self: center;
+    justify-self: center;
+}
+
+#logo{
+    width:158px; 
+    height:33;
+    padding-bottom: 50px;
+}
+
+#info h2{
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+#header :nth-child(1){
+    font-weight: 100;
+}
+
+#header :nth-child(2){
+    color: hsl(0, 6%, 24%);
+    font-weight: 600;
+}
+
+#cover{
+    background-image: url('./images/hero-desktop.jpg');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+input{
+    height: 30px;
+    padding: 25px;
+    border-radius: inherit;
+    width: 100%;
+    border: 1px solid hsl(0, 36%, 70%);
+    color: hsl(0, 36%, 90%); 
+    border-radius: 30px;  
+}
+
+input:focus{
+    border: red solid 1px;
+}
+
+input[type='email']{
+    color: hsl(0, 6%, 24%);  
+    outline: none;
+}
+
+button{
+    display: flex;
+    border-radius: 30px;  
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    border: none;
+    width: 80px;
+    right: 0;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%),  hsl(0, 74%, 74%)); 
+    box-shadow: 5px 10px 70px -21px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 10px 70px -21px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 10px 70px -21px rgba(0,0,0,0.75);
+    z-index:2;
+    transition: 1s;
+}
+
+button:hover{
+    background: linear-gradient(135deg, #f8dedd,  #f2abac);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: hsl(0, 36%, 70%);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: hsl(0, 36%, 70%);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: hsl(0, 36%, 70%);
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    
+  }
+}
