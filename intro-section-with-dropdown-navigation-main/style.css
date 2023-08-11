@@ -1,0 +1,30 @@
+:root {
+  --white: hsl(0, 0%, 98%);
+  --gray: hsl(0, 0%, 41%);
+  --black: hsl(0, 0%, 8%);
+}
+
+body {
+  background-color: var(--white);
+}
+
+p,
+nav {
+  color: var(--gray);
+  display: flex;
+}
+
+nav ul:hover,
+nav li:hover {
+  cursor: pointer;
+  color: var(--black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--black);
+}
