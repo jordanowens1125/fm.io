@@ -11,7 +11,12 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -24,69 +29,67 @@
         color: hsl(228, 45%, 44%);
       }
     </style>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <nav>
+    <header>
       <a href="/">
-        <img src="./images//logo.svg" alt="" srcset="" />
+        <img src="./images/logo.svg" alt="" srcset="" />
       </a>
+      <nav>
+        <img src="./images/icon-menu.svg" alt="" srcset="" class="mobile"/>
+        <div class="desktop">
+          <ul>
+            <li>Features</li>
+            <li>Company</li>
+            <li>Careers</li>
+            <li>About</li>
+          </ul>
+          
+        </div>
+        <div class="desktop"><button>Login</button> <button class="register-button">Register</button></div>
+      </nav>
+    </header>
 
-      <div>
-        <ul>
-          Features
-        </ul>
-
-        <ul>
-          Company
-        </ul>
-
-        <ul>
-          Careers
-        </ul>
-
-        <ul>
-          About
-        </ul>
-      </div>
-      <div>Login Register</div>
-    </nav>
     <div id="hero">
-      <h1>Make remote work</h1>
-      <p>
-        Get your team in sync, no matter your location. Streamline processes,
-        create team rituals, and watch productivity soar.
-      </p>
-      <button>Learn more</button>
+      <div class="info section">
+        <h1>Make <br>remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button class="cta">Learn more</button>
 
-      <div class="clients">
-        <img src="./images/client-databiz.svg" alt="" srcset="" />
+        <div class="clients">
+          <img src="./images/client-databiz.svg" alt="" srcset="" />
 
-        <img src="./images/client-audiophile.svg" alt="" srcset="" />
+          <img src="./images/client-audiophile.svg" alt="" srcset="" />
 
-        <img src="./images/client-meet.svg" alt="" srcset="" />
+          <img src="./images/client-meet.svg" alt="" srcset="" />
 
-        <img src="./images/client-maker.svg" alt="" srcset="" />
+          <img src="./images/client-maker.svg" alt="" srcset="" />
+        </div>
       </div>
+      <div class="cover-img">
+        <picture>
+        <source
+          media="(max-width: 767px)"
+          srcset="images/image-hero-mobile.png"
+        />
+        <source
+          media="(min-width: 767px)"
+          srcset="images/image-hero-desktop.png"
+        />
+        <img src="images/hero-desktop.jpg" alt="Image" />
+      </picture>
+      </div>
+      
     </div>
 
-    <picture id="cover-img">
-      <source
-        media="(max-width: 750px)"
-        srcset="images/image-hero-mobile.png"
-      />
-      <source
-        media="(min-width: 750px)"
-        srcset="images/image-hero-desktop.png"
-      />
-      <img src="images/hero-desktop.jpg" alt="Image" />
-    </picture>
-
-    <div class="attribution">
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+        >Frontend Mentor</a> by Jordan Owens</a>.
+    </footer>
   </body>
 </html>
