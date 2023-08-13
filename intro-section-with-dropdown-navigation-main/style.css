@@ -129,7 +129,6 @@ nav li:hover,
 nav button:hover {
   cursor: pointer;
   color: var(--black);
-  fill: pink;
 }
 
 h1,
@@ -185,7 +184,7 @@ button {
   max-width: 100px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 820px) {
   .mobile {
     display: none;
   }
@@ -248,19 +247,22 @@ button {
   .dropdown ul {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 1px;
     padding: 15px 10px;
+  }
+  
+  .dropdown .icons-included li a {
+    min-width: 125px;
   }
 
   .dropdown ul li {
-    padding: 5px;
+    padding: 10px;
     border-radius: 8px;
   }
 
   .dropdown ul li a {
     display: flex;
     gap: 15px;
-    width: 125px;
   }
 
   .dropdown ul li:hover {
@@ -271,7 +273,7 @@ button {
   .dropdown ul li a img {
     width: 16px;
   }
-  
+
   /* NAVBAR on Desktop */
   .desktop {
     display: block;
