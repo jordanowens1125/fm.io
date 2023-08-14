@@ -37,18 +37,16 @@
         <img src="./images/logo.svg" alt="" srcset="" />
       </a>
       <nav>
-        <img src="./images/icon-menu.svg" alt="" srcset="" class="mobile"/> 
+        <img src="./images/icon-menu.svg" alt="" srcset="" class="mobile" onclick="showMobileNav()"/> 
         
         <div id="nav-modal">
           <ul class="nav">
-            <li class="mobile">
-              <img src="./images/icon-close-menu.svg" alt="" >
-            </li>
+            <img src="./images/icon-close-menu.svg" alt="" class="align-self-end mobile" onclick="hideMobileNav()">
             <li onclick="handleNavExtension(this)">
-              <a href="#">
+              <span href="#">
                 Features 
-                <img src="./images/icon-arrow-up.svg" alt="">
-              </a>
+                <img src="./images/icon-arrow-down.svg" alt="">
+              </span>
               <div class="dropdown closed">
                 <ul class="icons-included">
                   <li><a href="#" ><img src="./images/icon-todo.svg" alt="">Todo List</a></li>
@@ -61,7 +59,7 @@
             <li onclick="handleNavExtension(this)">
               <a href="#">
                 Company
-                <img src="./images/icon-arrow-up.svg" alt="">
+                <img src="./images/icon-arrow-down.svg" alt="">
               </a>
               <div class="dropdown closed">
                 <ul>
@@ -73,11 +71,13 @@
               </div>
             </li>
             <li><a href="#">Careers</a></li>
-            <li><a href="#">About</a></li>
-            <li class="buttons">
-              <button>Login</button><button class="register-button">Register</button>
-            </li>
+            <li><a href="#">About</a></li>  
+            <li class="mobile"><button>Login</button></li>
+            <li class="mobile"><button class="register-button">Register</button></li>
           </ul>
+          <div class="desktop buttons">
+              <button>Login</button><button class="register-button">Register</button>
+            </div>
         </div>
        
       </nav>

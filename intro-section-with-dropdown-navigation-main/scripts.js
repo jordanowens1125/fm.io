@@ -12,12 +12,13 @@ const handleNavExtension = (e) => {
 const expandedElement = (e) => {
   e.classList.remove("closed");
   e.classList.add("expanded");
-  e.style.height = 'fit-content'
+  e.style.height = "fit-content";
 };
 
 const closeElement = (e) => {
   e.classList.remove("expanded");
   e.classList.add("closed");
+  e.style.height = 0;
 };
 
 const rotateDrodownIcon = (e) => {
@@ -32,7 +33,16 @@ const rotateDrodownIcon = (e) => {
   }
 };
 
+const showMobileNav = () => {
+  const modal = document.getElementById("nav-modal");
+  modal.style.display = "block";
+};
 
-document.addEventListener('click',(e) => {
-    // console.log(e.target);
-})
+const hideMobileNav = () => {
+  const modal = document.getElementById("nav-modal");
+  modal.style.display = "none";
+};
+
+document.addEventListener("click", (e) => {
+  // console.log(e.target);
+});
