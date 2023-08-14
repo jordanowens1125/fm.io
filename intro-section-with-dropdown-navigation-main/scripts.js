@@ -46,3 +46,7 @@ const hideMobileNav = () => {
 document.addEventListener("click", (e) => {
   // console.log(e.target);
 });
+
+window.onresize = (function () {
+  location.reload();
+})

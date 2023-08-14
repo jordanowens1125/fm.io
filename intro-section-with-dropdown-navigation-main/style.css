@@ -215,6 +215,7 @@ button {
     transition: 0.5s;
     transform-origin: top;
     height: fit-content;
+    opacity: 1;
   }
 
     .extended-icon {
@@ -347,6 +348,24 @@ button {
     transition: 0.5s;
     opacity: 0;
     height: 0;
+  }
+
+.closed {
+    transform: scaleY(0);
+    transform-origin: top;
+    height: 0;
+    opacity: 0;
+    transition: 0.5s;
+    transform-origin: top;
+  }
+
+  .expanded {
+    height: fit-content;
+    overflow: auto;
+    transition: 0.5s;
+    transform-origin: top;
+    height: fit-content;
+    opacity: 1;
   }
 
   .dropdown ul {
