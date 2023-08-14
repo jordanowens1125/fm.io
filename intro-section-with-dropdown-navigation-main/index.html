@@ -37,44 +37,49 @@
         <img src="./images/logo.svg" alt="" srcset="" />
       </a>
       <nav>
-        <div class="desktop">
-          <ul >
-          <li onclick="handleNavExtension(this)">
-            <a href="#">
-              Features 
-              <img src="./images/icon-arrow-up.svg" alt="">
-            </a>
-            <div class="dropdown closed">
-              <ul class="icons-included">
-                <li><a href="#" ><img src="./images/icon-todo.svg" alt="">Todo List</a></li>
-                <li><a href="#"><img src="./images/icon-calendar.svg" alt="">Calendar</a></li>
-                <li><a href="#"><img src="./images/icon-reminders.svg" alt="">Reminders</a></li>
-                <li><a href="#"><img src="./images/icon-planning.svg" alt="">Planning</a></li>
-              </ul>
-            </div>
-          </li>
-          <li onclick="handleNavExtension(this)">
-            <a href="#">
-              Company
-              <img src="./images/icon-arrow-up.svg" alt="">
-            </a>
-            <div class="dropdown closed">
-              <ul>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Blog</a></li>
-              </ul>
-              
-            </div>
-          </li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-        </div>
+        <img src="./images/icon-menu.svg" alt="" srcset="" class="mobile"/> 
         
-        <img src="./images/icon-menu.svg" alt="" srcset="" class="mobile"/>  
+        <div id="nav-modal">
+          <ul class="nav">
+            <li class="mobile">
+              <img src="./images/icon-close-menu.svg" alt="" >
+            </li>
+            <li onclick="handleNavExtension(this)">
+              <a href="#">
+                Features 
+                <img src="./images/icon-arrow-up.svg" alt="">
+              </a>
+              <div class="dropdown closed">
+                <ul class="icons-included">
+                  <li><a href="#" ><img src="./images/icon-todo.svg" alt="">Todo List</a></li>
+                  <li><a href="#"><img src="./images/icon-calendar.svg" alt="">Calendar</a></li>
+                  <li><a href="#"><img src="./images/icon-reminders.svg" alt="">Reminders</a></li>
+                  <li><a href="#"><img src="./images/icon-planning.svg" alt="">Planning</a></li>
+                </ul>
+              </div>
+            </li>
+            <li onclick="handleNavExtension(this)">
+              <a href="#">
+                Company
+                <img src="./images/icon-arrow-up.svg" alt="">
+              </a>
+              <div class="dropdown closed">
+                <ul>
+                  <li><a href="#">History</a></li>
+                  <li><a href="#">Our Team</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+                
+              </div>
+            </li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+            <li class="buttons">
+              <button>Login</button><button class="register-button">Register</button>
+            </li>
+          </ul>
+        </div>
        
-        <div class="desktop"><button>Login</button> <button class="register-button">Register</button></div>
       </nav>
     </header>
 

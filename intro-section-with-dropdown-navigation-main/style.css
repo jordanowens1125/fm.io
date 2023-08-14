@@ -26,6 +26,7 @@ body {
   background-color: var(--white);
   width: 100vw;
   min-height: 100vh;
+  height: 100%;
   overflow: auto;
   display: flex;
   flex-direction: column;
@@ -82,6 +83,10 @@ h6 {
   isolation: isolate;
 }
 
+ul {
+  list-style: none;
+}
+
 :root {
   --white: hsl(0, 0%, 98%);
   --gray: hsl(0, 0%, 41%);
@@ -113,8 +118,37 @@ header,
 p,
 nav {
   color: var(--gray);
-  display: flex;
 }
+
+/* Mobile Nav */
+#nav-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  z-index: 999;
+}
+
+.nav {
+  background-color: var(--white);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Mobile Nav */
 
 nav button {
   background-color: inherit;
@@ -151,12 +185,14 @@ button {
   color: var(--white);
   border: 2px solid var(--black);
 }
+
 .cta:hover {
   background-color: var(--white);
   color: var(--black);
   cursor: pointer;
   border: 2px solid var(--black);
 }
+
 #hero {
   display: flex;
   flex-direction: column-reverse;
@@ -188,6 +224,20 @@ button {
   .mobile {
     display: none;
   }
+
+  /* Unset mobile nav */
+  /* Mobile Nav */
+  #nav-modal {
+    all: unset;
+    width: 100%;
+  }
+
+  .nav {
+    all: unset;
+    width: 100%;
+  }
+  /* Unset mobile nav */
+
   /* NAVBAR on Desktop */
   header {
     gap: 50px;
@@ -207,10 +257,11 @@ button {
     align-items: center;
   }
 
-  nav ul {
-    list-style: none;
+  nav ul, .nav {
     display: flex;
     gap: 45px;
+    list-style: none;
+    align-items: center;
   }
 
   nav ul li {
@@ -244,35 +295,34 @@ button {
     -moz-box-shadow: 0px 1px 12px -7px var(--black);
     margin-top: 10px;
     overflow: hidden;
-    transition: .5s;
+    transition: 0.5s;
     opacity: 0;
     height: 0;
   }
-  
+
   .extended-icon {
     transform: rotate(180deg);
-    transition: .5s;
-    
+    transition: 0.5s;
   }
-  
+
   .closed-icon {
     transform: rotate(0deg);
-    transition: .5s;
+    transition: 0.5s;
   }
-  
+
   .closed {
     transform: scaleY(0);
-    transition: .5s;
+    transition: 0.5s;
     transform-origin: top;
-    opacity: 0;
   }
 
   .expanded {
     height: fit-content;
     overflow: auto;
-    transition: .5s;
+    transition: 0.5s;
     transform-origin: top;
     opacity: 1;
+    height: fit-content;
   }
 
   .dropdown ul {
@@ -301,8 +351,15 @@ button {
     background-color: rgb(235, 235, 235);
     color: var(--black);
   }
+
   .dropdown ul li a img {
     width: 16px;
+  }
+
+  .buttons{
+    justify-self: end;
+    align-self: flex-end;
+    display: flex;
   }
 
   /* NAVBAR on Desktop */
@@ -312,9 +369,9 @@ button {
 
   #hero {
     flex-direction: row;
-    gap: 5%;
     justify-content: space-between;
     padding: 1.5% 8%;
+    gap: 20px;
   }
 
   h1 {
@@ -324,21 +381,24 @@ button {
   .info {
     text-align: left;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 5% 0;
     padding-bottom: 0;
     width: 50%;
     gap: clamp(2.25rem, 5vw, 6rem);
   }
+
   .info p {
     max-width: 75%;
   }
+
   .clients {
     padding: 0;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 5%;
   }
+
   .clients img {
     width: clamp(10px, 8%, 75px);
   }

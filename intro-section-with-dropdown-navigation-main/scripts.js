@@ -12,6 +12,7 @@ const handleNavExtension = (e) => {
 const expandedElement = (e) => {
   e.classList.remove("closed");
   e.classList.add("expanded");
+  e.style.height = 'fit-content'
 };
 
 const closeElement = (e) => {
