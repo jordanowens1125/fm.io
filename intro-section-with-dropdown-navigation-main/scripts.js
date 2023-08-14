@@ -30,3 +30,8 @@ const rotateDrodownIcon = (e) => {
     dropdownIcon.classList.add("extended-icon");
   }
 };
+
+
+document.addEventListener('click',(e) => {
+    // console.log(e.target);
+})

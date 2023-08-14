@@ -246,6 +246,7 @@ button {
     overflow: hidden;
     transition: .5s;
     opacity: 0;
+    height: 0;
   }
   
   .extended-icon {
