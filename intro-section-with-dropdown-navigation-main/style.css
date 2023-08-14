@@ -31,7 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: clamp(16px, 4vw);
+  font-size: clamp(16px, 1vw, 4vw);
 }
 /*
   5. Improve media defaults
@@ -177,7 +177,7 @@ nav button {
 }
 
 .register-button {
-  border: 2px solid var(--black);
+  border: 2px solid var(--gray);
 }
 
 nav li:hover,

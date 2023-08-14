@@ -46,11 +46,16 @@
           Hello fellow shoppers! We're currently building our new fashion store.
           Add your email below to stay up-to-date with announcements and our launch deals.
         </p>
-        <form >
-            <input type="email" placeholder="Email Address" required>
+        <div>
+          <form >
+            <input type="email" placeholder="Email Address" id="email">
             </input>
-            <button><img src="./images/icon-arrow.svg" alt=""></button>
-        </form>
+            <img src="./images/icon-error.svg" alt="" id="error-icon">
+            <button type="button" onclick="handleSubmit()"><img src="./images/icon-arrow.svg" alt=""></button>
+            
+        </form><p id="error">Please provide a valid email</p>
+        </div>
+        
     </div>
   </main>
   
@@ -60,5 +65,5 @@
       Coded by <a href="#">Jordan Owens</a>.
     </p>
   </footer> -->
-</body>
+</body><script src="./scripts.js"></script>
 </html>
