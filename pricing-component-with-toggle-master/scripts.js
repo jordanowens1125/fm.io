@@ -5,14 +5,14 @@ const ANNUALLY = "annually";
 const handleToggle = () => {
   if (annual) {
     //show monthly classes
-    removeHiddenFromSelectedElements(MONTHLY);
+    removeHiddenFromGivenClass(MONTHLY);
     //hide annual classes
-    addHiddenToSelectedElements(ANNUALLY);
+    addHiddenToGivenClass(ANNUALLY);
   } else {
     //hide monthly classes
-    addHiddenToSelectedElements(MONTHLY);
+    addHiddenToGivenClass(MONTHLY);
     //show annual classes
-    removeHiddenFromSelectedElements(ANNUALLY);
+    removeHiddenFromGivenClass(ANNUALLY);
   }
   annual = !annual;
 };
@@ -25,14 +25,14 @@ const addHiddenClass = (el) => {
   el.classList.add("hidden");
 };
 
-const addHiddenToSelectedElements = (classname) => {
+const addHiddenToGivenClass = (classname) => {
   const selectedElements = document.getElementsByClassName(classname);
   for (let i = 0; i < selectedElements.length; i++) {
     addHiddenClass(selectedElements[i]);
   }
 };
 
-const removeHiddenFromSelectedElements = (classname) => {
+const removeHiddenFromGivenClass = (classname) => {
   const selectedElements = document.getElementsByClassName(classname);
   for (let i = 0; i < selectedElements.length; i++) {
     removeHiddenClass(selectedElements[i]);
