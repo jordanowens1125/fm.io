@@ -31,6 +31,8 @@ main {
   gap: 30px;
   padding: 20px;
   color: var(--text-color);
+  justify-content: center;
+  width: 100%;
 }
 
 ul {
@@ -113,7 +115,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  min-width: 90vw;
+  min-width: 70vw;
 }
 
 .card {
@@ -189,6 +191,12 @@ button:hover {
   font-size: 2.5em;
 }
 
+.hidden{
+  display: none;
+  transition: 1s;
+  transform-origin: left;
+}
+
 .preferred {
   background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   color: var(--white);
@@ -208,7 +216,7 @@ button:hover {
   border: 1px solid var(--white);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   main {
     padding: 1% 20%;
   }
@@ -216,6 +224,7 @@ button:hover {
     flex-direction: row;
     gap: 0px;
     align-items: center;
+    max-width: 1200px;
   }
   .card:first-child {
     border-bottom-right-radius: 0;

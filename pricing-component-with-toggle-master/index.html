@@ -39,7 +39,7 @@
       <div class="toggle-section">
         <p>Annually</p>
         <label class="switch">
-          <input type="checkbox" checked />
+          <input type="checkbox" checked onclick="handleToggle()"/>
           <span class="slider round"></span>
         </label>
         <p>Monthly</p>
@@ -49,7 +49,7 @@
           <span class="card-heading">
             <h2>Basic</h2>
             <p class="annually price">&dollar;199.99</p>
-            <p class="monthly price">&dollar;19.99</p>
+            <p class="monthly price hidden">&dollar;19.99</p>
           </span>
           <ul class="features">
             <li>500 GB Storage</li>
@@ -63,7 +63,7 @@
           <span class="card-heading">
             <h2>Professional</h2>
             <p class="annually price">&dollar;249.99</p>
-            <p class="monthly price">&dollar;24.99</p>
+            <p class="monthly price hidden">&dollar;24.99</p>
           </span>
           <ul class="features">
             <li>1 TB Storage</li>
@@ -77,7 +77,7 @@
           <span class="card-heading">
             <h2>Master</h2>
             <p class="annually price">&dollar;399.99</p>
-            <p class="monthly price">&dollar;39.99</p>
+            <p class="monthly price hidden">&dollar;39.99</p>
           </span>
           <ul class="features">
             <li>2 TB Storage</li>
@@ -96,4 +96,5 @@
       </div>
     </main>
   </body>
+  <script src="./scripts.js"></script>
 </html>
