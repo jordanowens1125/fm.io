@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 :root {
-  --primary: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+  --primary-gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
   --light-gray: hsl(234, 14%, 74%);
   --white: hsl(240, 78%, 98%);
   --horizontal: linear-gradient(
@@ -90,7 +90,7 @@ input:checked + .slider {
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px var(--primary);
+  box-shadow: 0 0 1px var(--primary-gradient);
 }
 
 input:checked + .slider:before {
