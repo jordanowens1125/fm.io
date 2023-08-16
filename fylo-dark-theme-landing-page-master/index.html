@@ -11,8 +11,14 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>
       Frontend Mentor | Fylo landing page with dark theme and features grid
     </title>
@@ -30,19 +36,30 @@
   </head>
   <body>
     <header>
-      <img src="./images/logo.svg" alt="" />
-      <nav>Features Team Sign In</nav>
+      <img src="./images/logo.svg" alt="" class="logo"/>
+      <nav>
+        <a href="">Features</a>
+        <a href="">Team</a>
+        <a href="#">Sign In</a>
+      </nav>
     </header>
 
     <section class="hero">
-      <picture>
-        <img src="./images/bg-curvy-desktop.svg" alt="" />
+      <div class="content">
+        <img src="./images/illustration-intro.png" alt="" />
+        <h1>All your files in one secure location, accessible anywhere.</h1>
+        <p>
+          Fylo stores all your most important files in one secure location.
+          Access them wherever you need, share and collaborate with friends
+          family, and co-workers.
+        </p>
+
+        <button>Get Started</button>
+      </div>
+
+      <picture aria-hidden="true" class="curve">
+        <img src="./images/bg-curvy-mobile.svg" alt="" />
       </picture>
-      <img src="./images/illustration-intro.png" alt="">
-      All your files in one secure location, accessible anywhere. Fylo stores
-      all your most important files in one secure location. Access them wherever
-      you need, share and collaborate with friends family, and co-workers.
-      <button>Get Started</button>
     </section>
 
     <section class="features">
@@ -80,7 +97,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="productive">
       <img src="./images/illustration-stay-productive.png" alt="" />
       <h3>Stay productive, wherever you are</h3>
       <p>
@@ -91,7 +108,7 @@
         Securely share files and folders with friends, family and colleagues for
         live collaboration. No email attachments required.
       </p>
-      <a href="#">See how Fylo works</a>
+      <a href="#" class="cta-link"> See how Fylo works <img src="./images/icon-arrow.svg" alt=""></a>
     </section>
 
     <section class="testimonials">
@@ -143,7 +160,7 @@
     </section>
 
     <footer>
-      <img src="./images/logo.svg" alt="" />
+      <img src="./images/logo.svg" alt="" class="logo"/>
       <div class="contact">
         <div>
           <img src="./images/icon-location.svg" alt="" />
@@ -165,9 +182,7 @@
       <div class="links">
         <img src="./images/" alt="" />
       </div>
-    </footer>
 
-    <footer>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

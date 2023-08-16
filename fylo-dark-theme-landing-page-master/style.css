@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
 :root {
   --primary-bg: hsl(218, 28%, 13%);
   --text-color: hsl(0, 0%, 100%);
@@ -8,6 +10,9 @@
   --blue: hsl(198, 60%, 50%);
   --body-font: "Open Sans", sans-serif;
   --primary-font: "Raleway", sans-serif;
+  --body-font-size: 14px;
+  --section-padding: 25px;
+  --primary-font-size: 1.2em
 }
 
 * {
@@ -21,12 +26,165 @@ body {
   font-size: 14px;
   height: 100%;
   width: 100%;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  text-align: center;
 }
 
-.hero {
+h1,
+h2,
+h3,
+h4,
+h5.h6,
+button,
+header {
+  font-family: var(--primary-font);
+  font-size: var(--primary-font-size);
+}
+
+button {
+  background: linear-gradient(to right, var(--cyan), var(--blue));
+  border: none;
+  width: 100%;
+  padding: 20px;
+  border-radius: 50px;
+  color: inherit;
+  font-weight: bold;
+  font-size: var();
+}
+
+input {
+  width: 100%;
+  padding: 20px;
+  border-radius: 50px;
+  border: none;
+}
+
+header,
+section,
+footer {
+  padding: var(--section-padding);
+}
+
+section,
+.contact,
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero,
+header {
   background-color: var(--secondary-bg);
 }
 
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* End of header */
+
+/* Hero */
+.hero {
+  position: relative;
+}
+.hero .content {
+  z-index: 999;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  font-size: var(--primary-font-size);
+}
+
+.curve {
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+/* End of Hero */
+
+/* Features */
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 75px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.feature img {
+  margin-bottom: 30px;
+}
+/* Features */
+
+/* productive */
+.productive {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* testimonials */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  gap: 25px;
+}
+
+.testimony {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* testimonials */
+
 footer {
   background-color: var(--footer-bg);
+  text-align: left;
+  align-items: baseline;
+}
+
+.cta-link{
+  color: var(--cyan);
+  border-bottom: 1px solid var(--cyan);
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+  padding-bottom: 5px;
+}
+
+.cta-link img{
+  aspect-ratio: 1;
+  width: 24px;
+}
+
+.logo{
+  width: 200px;
 }
