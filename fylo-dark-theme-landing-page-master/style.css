@@ -5,6 +5,7 @@
   --text-color: hsl(0, 0%, 100%);
   --footer-bg: hsl(216, 53%, 9%);
   --secondary-bg: hsl(217, 28%, 15%);
+  --testimonial-bg: hsl(219, 30%, 18%);
   --error: hsl(0, 100%, 63%);
   --cyan: hsl(176, 68%, 64%);
   --blue: hsl(198, 60%, 50%);
@@ -12,7 +13,7 @@
   --primary-font: "Raleway", sans-serif;
   --body-font-size: 14px;
   --section-padding: 25px;
-  --primary-font-size: 1.2em
+  --primary-font-size: 1.2em;
 }
 
 * {
@@ -21,7 +22,7 @@
 }
 
 body {
-  background-color: var(--primary-bg);
+  background-color: var(--secondary-bg);
   color: var(--text-color);
   font-size: 14px;
   height: 100%;
@@ -92,6 +93,10 @@ header {
 }
 /* End of header */
 
+.logo {
+  width: 100px;
+}
+
 /* Hero */
 .hero {
   position: relative;
@@ -145,33 +150,7 @@ header {
   gap: 20px;
 }
 
-/* testimonials */
-.testimonials {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-  gap: 25px;
-}
-
-.testimony {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--secondary-bg);
-  padding: 20px;
-  border-radius: 5px;
-}
-
-/* testimonials */
-
-footer {
-  background-color: var(--footer-bg);
-  text-align: left;
-  align-items: baseline;
-}
-
-.cta-link{
+.cta-link {
   color: var(--cyan);
   border-bottom: 1px solid var(--cyan);
   display: flex;
@@ -180,11 +159,82 @@ footer {
   padding-bottom: 5px;
 }
 
-.cta-link img{
+.cta-link img {
   aspect-ratio: 1;
   width: 24px;
 }
 
-.logo{
-  width: 200px;
+/* testimonials */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  gap: 30px;
 }
+
+.testimony {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--testimonial-bg);
+  border: 5px solid var(--testimonial-bg);
+  padding: 30px;
+  border-radius: 5px;
+  gap: 30px;
+  box-shadow: 0px 0px 13px 5px var(--secondary-bg);
+  -webkit-box-shadow: 0px 0px 13px 5px var(--secondary-bg);
+  -moz-box-shadow: 0px 0px 13px 5px var(--secondary-bg);
+}
+
+.client {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.client img {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.client .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+/* testimonials */
+
+/* cta-section */
+.cta-section {
+}
+/* cta-section */
+
+/* footer */
+footer {
+  background-color: var(--footer-bg);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+footer .links{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact div {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+/* footer */
