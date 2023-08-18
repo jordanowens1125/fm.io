@@ -21,6 +21,13 @@
   margin: 0;
 }
 
+main{
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 body {
   background-color: var(--secondary-bg);
   color: var(--text-color);
@@ -30,6 +37,8 @@ body {
   font-family: var(--body-font);
   font-size: var(--body-font-size);
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 h1,
@@ -51,7 +60,7 @@ button {
   border-radius: 50px;
   color: inherit;
   font-weight: bold;
-  font-size: var();
+  font-size: var(--primary-font-size);
 }
 
 input {
@@ -214,6 +223,12 @@ header {
 
 /* cta-section */
 .cta-section {
+  margin: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 1px var(--footer-bg);
+  -webkit-box-shadow: 0px 0px 20px 1px var(--footer-bg);
+  -moz-box-shadow: 0px 0px 20px 1px var(--footer-bg);
+  background-color: var(--testimonial-bg);
 }
 /* cta-section */
 
@@ -226,7 +241,7 @@ footer {
   gap: 60px;
 }
 
-footer .links{
+footer .links {
   display: flex;
   flex-direction: column;
   gap: 20px;
