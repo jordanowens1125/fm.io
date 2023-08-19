@@ -65,8 +65,11 @@
           <button>Get Started</button>
         </div>
 
-        <picture aria-hidden="true" class="curve">
-          <img src="./images/bg-curvy-mobile.svg" alt="" />
+
+        <picture id="cover-img" class="curve">
+          <source media="(max-width: 375px)" srcset="images/bg-curvy-mobile.svg" />
+          <source media="(min-width: 375px)" srcset="images/bg-curvy-desktop.svg" />
+          <img src="images/bg-curvy-desktop.svg" alt="Image" />
         </picture>
       </section>
 
